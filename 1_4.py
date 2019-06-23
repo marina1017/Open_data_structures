@@ -7,12 +7,9 @@ stack = []
 set = set()
 
 while line:
-    
-    if line in set:
-        pass
-    else:
+    if not line in set:
         set.add(line)
         print(line)
-    line = f.readline()
+    line = f.readline().strip()
 
 f.close()
