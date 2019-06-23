@@ -25,12 +25,11 @@ test_data = open("text.txt", "r")
 # 行ごとにすべて読み込んでリストデータにする
 lines = test_data.readlines()
 
-set = set()
+
+Sset = set(map(lambda x:x.strip(),lines))
 # 一行ずつ表示する
-for line in lines:
-    set.add(line.strip())
-    sorted_set = sorted(set, key=lambda x: len(x))
-    print(sorted_set)
+sorted_set = sorted(Sset, key=lambda x: len(x))
+print(sorted_set)
 
 # ファイルをクローズする
 test_data.close()
