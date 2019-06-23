@@ -7,8 +7,9 @@ stack = []
 
 while line:
     stack.append(line.strip())
-    for _ in range(len(stack)):
-        print("stack.pop()",stack.pop())
     line = f.readline()
+    
+for _ in range(len(stack)):
+    print("stack.pop()",stack.pop())
 # ファイルをクローズする
 f.close()
