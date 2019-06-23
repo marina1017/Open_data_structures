@@ -7,11 +7,10 @@ test_data = open("text.txt", "r")
 
 # 行ごとにすべて読み込んでリストデータにする
 lines = test_data.readlines()
-
-Sset = set(map(lambda x:x.strip(),lines))
-# 一行ずつ表示する
-sorted_set = sorted(Sset, key=lambda x: len(x))
-print(sorted_set)
+# dic
+dic = {}
+for line in lines:
+    dic.get(line) = 0
 
 # ファイルをクローズする
 test_data.close()
