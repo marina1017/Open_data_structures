@@ -43,10 +43,7 @@ class Bag(set):
     def bag_findAll(self,x):
         #存在確認をする
         if x in self.dic:
-            list = []
-            for count in range(self.dic[x]):
-                list.append(x)
-            return list
+            return [x for i in range(self.dic[x])]
         else:
             return None
 
