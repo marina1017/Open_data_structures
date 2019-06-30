@@ -1,12 +1,7 @@
 
 class Bag(set):
     def __init__(self, iterable=[]):
-        self._initialize()
         self.add_all(iterable)
-
-    def _initialize(self):
-        self.a = set()
-        #self.add_all(iterable)
 
     def add_all(self, a):
         for x in a:
